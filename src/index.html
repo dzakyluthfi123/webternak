@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>GreenFarm — Pakan Ternak & Kambing Premium</title>
+</head>
+
+<body class="bg-zinc-100 text-zinc-800 antialiased">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-zinc-300 bg-white/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+
+      <a href="#" class="flex items-center gap-4">
+        <img
+          src="images/logo.png"
+          alt="GreenFarm Logo"
+          class="h-14 w-14 rounded-full object-cover shadow-sm"
+        >
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-900">GreenFarm</p>
+          <p class="text-xs text-zinc-500">Livestock Supply</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#home" class="text-sm font-medium text-zinc-600 transition hover:text-green-900">Beranda</a>
+        <a href="#highlight" class="text-sm font-medium text-zinc-600 transition hover:text-green-900">Layanan</a>
+        <a href="#produk" class="text-sm font-medium text-zinc-600 transition hover:text-green-900">Produk</a>
+        <a href="#tentang" class="text-sm font-medium text-zinc-600 transition hover:text-green-900">Tentang</a>
+        <a href="#kontak" class="text-sm font-medium text-zinc-600 transition hover:text-green-900">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button
+          id="openCartBtn"
+          class="relative hidden rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 transition hover:border-green-900 hover:text-green-900 md:inline-flex"
+        >
+          Keranjang
+          <span
+            id="cartCount"
+            class="ml-2 inline-flex h-6 min-w-[24px] items-center justify-center rounded-full bg-green-900 px-2 text-xs font-semibold text-white"
+          >0</span>
+        </button>
+
+        <a href="#kontak" class="hidden rounded-full bg-green-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-green-800 md:inline-flex">
+          Konsultasi
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-[1600px] px-4 py-6 md:px-6 lg:px-8 lg:py-8">
+
+    <!-- HERO -->
+    <section id="home" class="mb-8">
+      <div class="mx-auto max-w-7xl rounded-[32px] border border-zinc-300 bg-gradient-to-br from-white via-white to-green-50/40 px-6 py-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:px-8 lg:px-10 lg:py-12">
+        <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div class="max-w-xl">
+            <span class="inline-flex rounded-full border border-zinc-300 bg-green-50 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-green-900">
+              Premium Livestock Supply
+            </span>
+
+            <h1 class="mt-6 text-4xl font-semibold leading-tight text-zinc-900 md:text-5xl">
+              Pakan ternak dan kambing pilihan
+              <span class="text-green-900">dengan tampilan yang lebih eksklusif.</span>
+            </h1>
+
+            <p class="mt-6 max-w-lg text-base leading-7 text-zinc-600 md:text-lg">
+              Website peternakan modern yang dirancang agar produk terlihat lebih premium,
+              lebih rapi, dan lebih meyakinkan untuk calon pembeli.
+            </p>
+
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="#produk" class="inline-flex items-center justify-center rounded-full bg-green-900 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-green-800">
+                Lihat Produk
+              </a>
+              <button
+                id="heroOpenCartBtn"
+                class="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white px-6 py-3.5 text-sm font-medium text-zinc-700 transition hover:border-green-900 hover:text-green-900"
+              >
+                Buka Keranjang
+              </button>
+            </div>
+
+            <div class="mt-10 grid grid-cols-3 gap-4 border-t border-zinc-300 pt-8">
+              <div class="rounded-2xl border border-zinc-300 bg-white p-4">
+                <p class="text-2xl font-semibold text-green-900">150+</p>
+                <p class="mt-1 text-sm text-zinc-500">Pelanggan tetap</p>
+              </div>
+              <div class="rounded-2xl border border-zinc-300 bg-white p-4">
+                <p class="text-2xl font-semibold text-green-900">30+</p>
+                <p class="mt-1 text-sm text-zinc-500">Produk tersedia</p>
+              </div>
+              <div class="rounded-2xl border border-zinc-300 bg-white p-4">
+                <p class="text-2xl font-semibold text-green-900">100%</p>
+                <p class="mt-1 text-sm text-zinc-500">Seleksi berkualitas</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="rounded-[30px] border border-zinc-300 bg-white p-3 shadow-[0_16px_40px_rgba(0,0,0,0.06)]">
+              <img
+                src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=80"
+                alt="Kambing berkualitas"
+                class="h-[520px] w-full rounded-[24px] object-cover"
+              >
+            </div>
+
+            <div class="absolute -left-4 bottom-6 hidden max-w-xs rounded-3xl border border-zinc-300 bg-white p-5 shadow-[0_12px_30px_rgba(0,0,0,0.07)] md:block">
+              <p class="text-[11px] uppercase tracking-[0.24em] text-zinc-400">Kualitas</p>
+              <p class="mt-2 text-lg font-semibold text-zinc-900">Ternak sehat & terawat</p>
+              <p class="mt-1 text-sm leading-6 text-zinc-500">
+                Seleksi ketat untuk hasil yang lebih meyakinkan dan profesional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT -->
+    <section id="highlight" class="mb-8">
+      <div class="mx-auto max-w-7xl rounded-[32px] border border-zinc-300 bg-white px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:px-8 lg:px-10 lg:py-10">
+        <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-900">Layanan Utama</p>
+            <h2 class="mt-2 text-3xl font-semibold text-zinc-900 md:text-4xl">
+              Struktur yang lebih ringan, rapi, dan tidak terasa pasaran.
+            </h2>
+          </div>
+          <p class="max-w-md text-sm leading-6 text-zinc-500">
+            Setiap blok dipisah jelas dengan frame tersendiri agar pengunjung mudah membaca informasi.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm transition hover:-translate-y-1 hover:bg-white">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-900">01</p>
+            <h3 class="mt-4 text-xl font-semibold text-zinc-900">Pakan Premium</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Konsentrat, hijauan, dan nutrisi ternak ditampilkan dengan visual yang lebih profesional.
+            </p>
+          </div>
+
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm transition hover:-translate-y-1 hover:bg-white">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-900">02</p>
+            <h3 class="mt-4 text-xl font-semibold text-zinc-900">Kambing Pilihan</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Menampilkan ternak sehat dan siap jual dengan pendekatan visual yang lebih eksklusif.
+            </p>
+          </div>
+
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm transition hover:-translate-y-1 hover:bg-white">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-green-900">03</p>
+            <h3 class="mt-4 text-xl font-semibold text-zinc-900">Pemesanan Efisien</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Jalur interaksi dibuat singkat agar pengguna fokus pada produk dan kontak penjualan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="mb-8">
+      <div class="mx-auto max-w-7xl rounded-[32px] border border-zinc-300 bg-white px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:px-8 lg:px-10 lg:py-10">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-900">Produk Unggulan</p>
+            <h2 class="mt-2 text-3xl font-semibold text-zinc-900 md:text-4xl">
+              Produk dipisah rapi dalam kartu yang lebih eksklusif.
+            </h2>
+          </div>
+          <p class="max-w-md text-sm leading-6 text-zinc-500">
+            Klik tombol <span class="font-semibold text-green-900">+ Keranjang</span> untuk menambahkan produk lalu lanjut ke checkout.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80"
+                alt="Pakan konsentrat"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Pakan</span>
+                <span class="text-sm text-zinc-400">01</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Konsentrat Premium</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Nutrisi seimbang untuk pertumbuhan ternak yang lebih optimal.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp120.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="1"
+                  data-name="Konsentrat Premium"
+                  data-price="120000"
+                  data-image="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80"
+                alt="Rumput kering"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Hijauan</span>
+                <span class="text-sm text-zinc-400">02</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Rumput Kering</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Pilihan pakan harian dengan kualitas serat yang tetap terjaga.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp50.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="2"
+                  data-name="Rumput Kering"
+                  data-price="50000"
+                  data-image="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=900&q=80"
+                alt="Kambing etawa"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Ternak</span>
+                <span class="text-sm text-zinc-400">03</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Kambing Etawa</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Ternak pilihan dengan kondisi sehat, aktif, dan siap dipasarkan.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp3.500.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="3"
+                  data-name="Kambing Etawa"
+                  data-price="3500000"
+                  data-image="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=900&q=80"
+                alt="Vitamin ternak"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Suplemen</span>
+                <span class="text-sm text-zinc-400">04</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Vitamin Ternak</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Dukungan nutrisi tambahan untuk menjaga daya tahan ternak.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp80.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="4"
+                  data-name="Vitamin Ternak"
+                  data-price="80000"
+                  data-image="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80"
+                alt="Jagung giling"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Pakan</span>
+                <span class="text-sm text-zinc-400">05</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Jagung Giling</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Sumber energi pakan harian dengan kualitas yang terjaga.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp65.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="5"
+                  data-name="Jagung Giling"
+                  data-price="65000"
+                  data-image="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                alt="Dedak halus"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Pakan</span>
+                <span class="text-sm text-zinc-400">06</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Dedak Halus</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Cocok untuk campuran pakan dengan tekstur lembut dan praktis.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp45.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="6"
+                  data-name="Dedak Halus"
+                  data-price="45000"
+                  data-image="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
+                alt="Mineral block"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Suplemen</span>
+                <span class="text-sm text-zinc-400">07</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Mineral Block</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Tambahan mineral untuk mendukung kesehatan ternak secara optimal.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp95.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="7"
+                  data-name="Mineral Block"
+                  data-price="95000"
+                  data-image="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-[28px] border border-zinc-300 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_35px_rgba(0,0,0,0.08)]">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80"
+                alt="Silase hijauan"
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+              >
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between">
+                <span class="rounded-full border border-zinc-300 bg-green-50 px-3 py-1 text-xs font-medium text-green-900">Hijauan</span>
+                <span class="text-sm text-zinc-400">08</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-zinc-900">Silase Hijauan</h3>
+              <p class="mt-2 text-sm leading-6 text-zinc-600">
+                Pakan fermentasi berkualitas untuk menjaga ketersediaan stok.
+              </p>
+              <div class="mt-6 flex items-center justify-between border-t border-zinc-300 pt-4">
+                <p class="text-base font-semibold text-green-900">Rp110.000</p>
+                <button
+                  class="add-to-cart rounded-full bg-green-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-green-800"
+                  data-id="8"
+                  data-name="Silase Hijauan"
+                  data-price="110000"
+                  data-image="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80"
+                >
+                  + Keranjang
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="mb-8">
+      <div class="mx-auto max-w-7xl rounded-[32px] border border-zinc-300 bg-white px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:px-8 lg:px-10 lg:py-10">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-900">Tentang Kami</p>
+            <h2 class="mt-2 text-3xl font-semibold text-zinc-900 md:text-4xl">
+              Tampilan yang tenang, terpisah jelas, dan membangun kepercayaan.
+            </h2>
+            <p class="mt-6 text-base leading-8 text-zinc-600">
+              Website ini dirancang untuk menampilkan bisnis pakan ternak dan kambing
+              dengan pendekatan visual yang lebih bersih. Setiap bagian dibuat seperti
+              blok tersendiri sehingga tidak menyatu dengan background utama dan lebih
+              mudah dipindai oleh pengunjung.
+            </p>
+          </div>
+
+          <div class="rounded-[30px] border border-zinc-300 bg-zinc-50 p-3 shadow-sm">
+            <img
+              src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=80"
+              alt="Peternakan modern"
+              class="h-[420px] w-full rounded-[24px] object-cover"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="mb-8">
+      <div class="mx-auto max-w-7xl rounded-[32px] border border-zinc-300 bg-white px-6 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:px-8 lg:px-10 lg:py-10">
+        <div class="mb-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-900">Keunggulan</p>
+          <h2 class="mt-2 text-3xl font-semibold text-zinc-900 md:text-4xl">
+            Pemisahan visual yang lebih kuat di setiap bagian.
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm">
+            <h3 class="text-lg font-semibold text-zinc-900">Section Terpisah</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Setiap blok memiliki frame sendiri sehingga tidak terasa menyatu dengan halaman.
+            </p>
+          </div>
+
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm">
+            <h3 class="text-lg font-semibold text-zinc-900">Kontras Lebih Jelas</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Background abu lembut membuat section putih terlihat lebih menonjol.
+            </p>
+          </div>
+
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm">
+            <h3 class="text-lg font-semibold text-zinc-900">Lebih Premium</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Kombinasi border abu, radius besar, dan bayangan lembut terasa lebih eksklusif.
+            </p>
+          </div>
+
+          <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-8 shadow-sm">
+            <h3 class="text-lg font-semibold text-zinc-900">Mudah Dibaca</h3>
+            <p class="mt-3 text-sm leading-6 text-zinc-600">
+              Pengunjung langsung memahami bagian hero, layanan, produk, dan kontak.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="kontak" class="mb-8">
+      <div class="mx-auto max-w-7xl rounded-[32px] border border-zinc-300 bg-green-900 px-6 py-10 text-white shadow-[0_20px_60px_rgba(0,0,0,0.06)] md:px-8 lg:px-10 lg:py-12">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-100">Hubungi Kami</p>
+          <h2 class="mt-3 text-3xl font-semibold leading-tight md:text-4xl">
+            Kini setiap section tampil lebih clean tanpa double border.
+          </h2>
+          <p class="mt-4 max-w-2xl text-sm leading-7 text-green-100/80 md:text-base">
+            Dengan satu border utama per section, tampilan jadi lebih ringan,
+            lebih modern, dan tetap terpisah jelas dari background halaman.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-medium text-green-900 transition hover:bg-green-50">
+              Chat Sekarang
+            </a>
+            <button
+              id="ctaOpenCartBtn"
+              class="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-white/10"
+            >
+              Lihat Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-300 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between lg:px-8">
+      <p>© 2026 NEXONUS Teknologi Digital. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="transition hover:text-green-900">Instagram</a>
+        <a href="#" class="transition hover:text-green-900">WhatsApp</a>
+        <a href="#" class="transition hover:text-green-900">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 z-[60] hidden bg-black/40"></div>
+
+  <!-- Cart Drawer -->
+  <aside id="cartDrawer" class="fixed right-0 top-0 z-[70] h-full w-full max-w-md translate-x-full border-l border-zinc-300 bg-white shadow-2xl transition-transform duration-300">
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between border-b border-zinc-200 px-6 py-5">
+        <div>
+          <h3 class="text-lg font-semibold text-zinc-900">Keranjang Belanja</h3>
+          <p class="text-sm text-zinc-500">Daftar produk yang sudah dipilih</p>
+        </div>
+        <button id="closeCartBtn" class="rounded-full border border-zinc-300 px-3 py-2 text-sm text-zinc-700 hover:border-green-900 hover:text-green-900">
+          Tutup
+        </button>
+      </div>
+
+      <div id="cartItems" class="flex-1 space-y-4 overflow-y-auto px-6 py-6">
+        <div class="rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-6 text-center text-sm text-zinc-500">
+          Keranjang masih kosong.
+        </div>
+      </div>
+
+      <div class="border-t border-zinc-200 px-6 py-5">
+        <div class="mb-4 flex items-center justify-between">
+          <span class="text-sm text-zinc-500">Total</span>
+          <span id="cartTotal" class="text-lg font-semibold text-green-900">Rp0</span>
+        </div>
+
+        <div class="grid gap-3">
+          <button
+            id="checkoutBtn"
+            class="rounded-full bg-green-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-green-800"
+          >
+            Checkout
+          </button>
+          <button
+            id="clearCartBtn"
+            class="rounded-full border border-zinc-300 bg-white px-5 py-3 text-sm font-medium text-zinc-700 transition hover:border-red-400 hover:text-red-600"
+          >
+            Kosongkan Keranjang
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <section id="checkoutModal" class="fixed inset-0 z-[80] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="relative z-10 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-[32px] border border-zinc-300 bg-white p-6 shadow-2xl md:p-8">
+      <div class="mb-6 flex items-start justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-green-900">Checkout</p>
+          <h3 class="mt-2 text-2xl font-semibold text-zinc-900">Ringkasan Pesanan</h3>
+        </div>
+        <button id="closeCheckoutBtn" class="rounded-full border border-zinc-300 px-4 py-2 text-sm text-zinc-700 transition hover:border-green-900 hover:text-green-900">
+          Tutup
+        </button>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <div>
+          <h4 class="mb-4 text-lg font-semibold text-zinc-900">Produk di Keranjang</h4>
+          <div id="checkoutItems" class="space-y-4"></div>
+        </div>
+
+        <div class="rounded-[28px] border border-zinc-300 bg-zinc-50 p-6">
+          <h4 class="text-lg font-semibold text-zinc-900">Detail Pembayaran</h4>
+
+          <div class="mt-6 space-y-4">
+            <div>
+              <label class="mb-2 block text-sm font-medium text-zinc-700">Nama Lengkap</label>
+              <input
+                type="text"
+                id="customerName"
+                placeholder="Masukkan nama lengkap"
+                class="w-full rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-green-900"
+              >
+            </div>
+
+            <div>
+              <label class="mb-2 block text-sm font-medium text-zinc-700">No. WhatsApp</label>
+              <input
+                type="text"
+                id="customerPhone"
+                placeholder="08xxxxxxxxxx"
+                class="w-full rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-green-900"
+              >
+            </div>
+
+            <div>
+              <label class="mb-2 block text-sm font-medium text-zinc-700">Metode Pembayaran</label>
+              <select
+                id="paymentMethod"
+                class="w-full rounded-2xl border border-zinc-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-green-900"
+              >
+                <option value="">Pilih metode pembayaran</option>
+                <option value="Transfer Bank">Transfer Bank</option>
+                <option value="COD">COD</option>
+                <option value="QRIS">QRIS</option>
+                <option value="E-Wallet">E-Wallet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-3 border-t border-zinc-300 pt-6 text-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-zinc-500">Jumlah Item</span>
+              <span id="checkoutItemCount" class="font-medium text-zinc-900">0</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-zinc-500">Subtotal</span>
+              <span id="checkoutSubtotal" class="font-medium text-zinc-900">Rp0</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-zinc-500">Metode</span>
+              <span id="selectedPaymentText" class="font-medium text-zinc-900">-</span>
+            </div>
+            <div class="flex items-center justify-between border-t border-zinc-300 pt-4">
+              <span class="text-base font-semibold text-zinc-900">Total Bayar</span>
+              <span id="checkoutTotal" class="text-xl font-semibold text-green-900">Rp0</span>
+            </div>
+          </div>
+
+          <button
+            id="placeOrderBtn"
+            class="mt-6 w-full rounded-full bg-green-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-green-800"
+          >
+            Buat Pesanan
+          </button>
+
+          <p id="orderMessage" class="mt-4 hidden rounded-2xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-900">
+            Pesanan berhasil dibuat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <script src="java,js"></script>
+</body>
+</html>
